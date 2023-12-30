@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Cosmetics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/d3c8ba32df.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Silkscreen&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="container-header">  
+    <!-- logo  -->
+    <img class="header-img" src="images/logo-Natural-Cosmetics.svg" alt="LogoSvg">
+    <!-- nav-bar -->
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <a  class="list-link"href="inicio"><li>Inicio</li></a>
+        <a  class="list-link"href="sobre-nosotros"><li>Nosotros</li></a>
+        <a  class="list-link"href="caracteristicas"><li>Características</li></a>
+        <a  class="list-link"href="productos"><li>Productos</li></a>
+        <a  class="list-link"href="#formulario"><li>Contáctanos</li></a>
+      </ul>
+    </nav>
+    <!-- icono-Whatsapp  -->
+    <div class="header-icon">  
+      <a href="#"><i class="fa-brands fa-whatsapp fa-xl" 
+        style="color: #0dc143;" ></i></a>
+    </div>
+  </header>
+  <main>
+    <!-- Productos destacados -->
+    <section id="inicio">
+      <div class="slider" id="slider">
+        <div class="inicio-container__text">
+          <h1>Cuida tu belleza natural</h1>
+          <a href="#formulario"><button class="container__btn" onclick="performAction()">Más Info</button></a>
+        </div>
+        <img src="images/carusel1.png" alt="">
+        <img src="images/carrusel2.png" alt="">
+        <img src="images/carrusel3.png" alt="">
+        <img src="images/carrusel1.png" alt="">
+      </div>
+      <script>
+        var slider = document.getElementById("slider");
+        
+        // Configura la velocidad de desplazamiento (en milisegundos)
+        var velocidadDesplazamiento = 3500; // 3 segundos
+        
+        function autoScroll() {
+          var scrollPos = slider.scrollLeft;
+          var nuevoScrollPos = scrollPos + slider.clientWidth;
+        
+          // Si llegamos al final, volvemos al principio sin animación suavizada
+          if (nuevoScrollPos >= slider.scrollWidth) {
+            slider.scrollTo({
+              left: 0,
+              behavior: "auto" // Sin animación suavizada
+            });
+          } else {
+            // Si no estamos al final, realizamos el desplazamiento suavizado
+            slider.scrollTo({
+              left: nuevoScrollPos,
+              behavior: "smooth"
+            });
+          }
+        }
+        
+        // Inicia el desplazamiento automático
+        setInterval(autoScroll, velocidadDesplazamiento);
+        </script>
+    
+    </section>
+    <!-- sobre nosotros -->
+    <section class="titulo-sobrenosotros">
+      <h3>Nosotros</h3><!-- contenedor de mision  -->
+      <div class="conteiner-sobrenosotros">
+        <img src="images/mision.jpg" alt="mujer-serum" class="section-sobrenosotros-img1"> 
+        <p>En Natural Cosmetics, nos dedicamos a realzar la belleza natural a través de serums de alta calidad, formulados con ingredientes naturales y científicamente respaldados. Buscamos empoderar a nuestros clientes para que se sientan seguros y radiantes, comprometidos con la sostenibilidad y la conexión armoniosa entre el cuidado personal y el respeto por el medio ambiente."</p>
+    </div>
+      <!-- contenedor de vision -->
+      <div class="contenier-vision">
+        <img src="images/vision.jpg" alt="producto-natural" class="section-sobrenosotros-img2"> 
+        <div class="contenedor-p">
+          <p>Ser líderes globales en serums naturales, transformando la percepción del cuidado de la piel hacia la autenticidad y la salud. Buscamos innovar de manera sostenible, estableciendo estándares excepcionales y fomentando la autoexpresión a través de productos que nutren y embellecen naturalmente.</p>
+        </div>
+      </div>
+    </section>
+    <!-- caracteristicas -->
+    <section id="caracteristicas" class="Container'Caract">
+      <h2>Características de Nuestros Productos</h2>
+      <article class="arti-container">
+        <div class="div-container">
+          <div class="div-caract1">
+            <img src="images/aloe-vera.png"alt="Aloe">
+            <ul>
+              <li> Enfatiza la presencia de ingredientes naturales y orgánicos en tus productos.</li>
+            </ul>
+          </div>
+          <div class="div-caract1">
+            <img src="images/non-toxic.png"alt="No toxico">
+            <ul>
+              <li> Destaca que tus productos están libres de parabenos, sulfatos, ftalatos y otras sustancias químicas nocivas.</li>
+            </ul>
+          </div>
+          <div class="div-caract1">
+            <img src="images/cruelty-free.png"alt="Cruelty-free">
+            <ul>
+              <li> Informa a los consumidores que tus productos no son probados en animales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="div-container2">
+        <div>
+          <div class="div-caract1">
+            <img src="images/sustainable.png"alt="sustentable">
+            <ul>
+              <li> Menciona si los envases de tus productos son reciclables o biodegradables.</li>
+            
+            </ul>
+          </div>
+          <div class="div-caract1">
+            <img src="images/massage-oil.png"alt="aroma">
+            <ul>
+              <li> Destaca los aromas naturales derivados de aceites esenciales u otros ingredientes botánicos.</li>
+            </ul>
+          </div>
+          <div class="div-caract1">
+            <img src="images/skin-care.png"alt="Resultados">
+            <ul>
+              <li> Comunica la eficacia de tus productos naturales en mejorar la apariencia y salud de la piel.</li>
+            </ul>
+          </div>
+        </div>
+    </article>
+  </section>
+<!-- lista de productos -->
+<section class="productosDestacados">
+  <h2>Productos Destacados</h2>
+  <div class="productos">
+    <!-- Aquí se insertan los productos -->
+    <div class="producto">
+      <img src="images/producto1.png" alt="Producto 1">
+      <p>Mascarilla de Pepino</p>
+      <p class="precio">$35.000</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto2.png" alt="Producto 1">
+      <p>Parches de Aguacate</p>
+      <p class="precio">$25.500</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto3.png" alt="Producto 1">
+      <p>Suero Rejuvenecedor</p>
+      <p class="precio">$80.500</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto4.png" alt="Producto 1">
+      <p>Face Roller</p>
+      <p class="precio">$50.000</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto5.png" alt="Kit Serum Aloe Vera">
+      <p>Kit Serum Aloe Vera</p>
+      <p class="precio">$115.000</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto6.png" alt="Maquillaje Natural">
+      <p>Maquillaje Natural</p>
+      <p class="precio">$205.500</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto7.png" alt="Jabones Naturales">
+      <p>Jabones Naturales</p>
+      <p class="precio">$70.500</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="images/producto8.png" alt="Agua de Rosas">
+      <p>Agua de Rosas</p>
+      <p class="precio">$50.000</p>
+      <button>Comprar</button>
+    </div>
+    <!-- Aquí se terminan los productos  -->
+  </div>
+  <!-- Aquí se terminan los productos  -->
+</section>
+
+
+
+<!-- Formulario -->
+    <section  class="formulario" id="formulario">
+      <form action="https://formsubmit.co/sebast305@hotmail.com" method="POST" target="_blank" autocomplete="off" class="formulario-container">
+        <h5 class="">Regístrate para más información</h5>
+        <div class="container_input">
+          <input type="text" name="name" placeholder="Nombre completo" required>
+          <input type="text" name="email" placeholder="Correo" required>
+        </div>
+        <div class="container_input">
+        <input type="number" name="number" placeholder="Numero de contacto">
+          <select name="select" name=""id="">
+            <option value="colombia">Colombia</option>
+            <option value="argentina">Argentina</option>
+            <option value="peru">Peru</option>
+          </select>
+        </div>
+          <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Twitter -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+
+        <!-- Google -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+
+        <!-- Instagram -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <!-- Linkedin -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
